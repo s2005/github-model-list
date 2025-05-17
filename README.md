@@ -34,7 +34,13 @@ This implementation is based on the following official GitHub documentation and 
    pip install -r requirements.txt
    ```
 
-3. Edit the `.env` file and replace `your_github_token_here` with your actual GitHub Personal Access Token
+3. Copy the example environment file and configure your GitHub token:
+
+   ```bash
+   cp .env.example .env
+   ```
+
+   Then edit the `.env` file and replace `your_github_token_here` with your actual GitHub Personal Access Token
 
 ## Creating a GitHub Token with models:read Permission
 
