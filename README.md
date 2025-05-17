@@ -28,18 +28,28 @@ This implementation is based on the following official GitHub documentation and 
 ## Setup
 
 1. Clone or download this repository
-2. Install the required dependencies:
 
+2. Set up a virtual environment (recommended):
+   ```bash
+   # Create a virtual environment
+   python -m venv .venv
+   
+   # Activate the virtual environment
+   # On Windows
+   .venv\Scripts\activate
+   # On macOS/Linux
+   source .venv/bin/activate
+   ```
+
+3. Install the required dependencies:
    ```bash
    pip install -r requirements.txt
    ```
 
-3. Copy the example environment file and configure your GitHub token:
-
+4. Copy the example environment file and configure your GitHub token:
    ```bash
    cp .env.example .env
    ```
-
    Then edit the `.env` file and replace `your_github_token_here` with your actual GitHub Personal Access Token
 
 ## Creating a GitHub Token with models:read Permission
@@ -78,6 +88,18 @@ If you receive a 401 Unauthorized error, make sure:
 - Your GitHub token is correctly entered in the `.env` file
 - Your token has the required `models:read` permission (as announced in the [March 2025 changelog](https://github.blog/changelog/2025-03-18-as-of-march-29-fine-grained-pats-and-github-apps-need-updates-to-access-github-models-playground/))
 - Your token has not expired
+
+## Project Structure
+
+- `.env.example`: Template for the environment file containing the GitHub token
+- `.env`: Your personal environment file with your GitHub token (not tracked by Git)
+- `.gitignore`: Specifies files that Git should ignore, including:
+  - Virtual environment folders (.venv/, env/, venv/)
+  - Environment variables file (.env) to prevent sharing sensitive information
+  - Python cache files (__pycache__/, *.pyc, etc.)
+- `requirements.txt`: Lists all the Python packages required for this project
+- `main.py`: The main Python script that interacts with the GitHub Models API
+- `github_models.json`: Output file containing the API response
 
 ## Note
 
