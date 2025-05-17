@@ -30,6 +30,7 @@ This implementation is based on the following official GitHub documentation and 
 1. Clone or download this repository
 
 2. Set up a virtual environment (recommended):
+
    ```bash
    # Create a virtual environment
    python -m venv .venv
@@ -42,14 +43,17 @@ This implementation is based on the following official GitHub documentation and 
    ```
 
 3. Install the required dependencies:
+
    ```bash
    pip install -r requirements.txt
    ```
 
 4. Copy the example environment file and configure your GitHub token:
+
    ```bash
    cp .env.example .env
    ```
+
    Then edit the `.env` file and replace `your_github_token_here` with your actual GitHub Personal Access Token
 
 ## Creating a GitHub Token with models:read Permission
